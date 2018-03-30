@@ -17,10 +17,11 @@
 <div id="front" class=" section scrollspy" style="padding: 0rem;" >
 	<ul id="slide-out" class="side-nav">
 		<li data-activates="slide-in" onclick="$('.button-collapse').sideNav('hide');$('.button-collapse').sideNav('hide');" style="background-color: black; ">
-			<i class="right material-icons" style="z-index: 999;    color: white; ">close</i>
-			<div class="userView" style="height: 150px; width: 150px; margin-left: 30px ">
-				<img class="background" style="height: 150px; width: 150px; z-index: 999; " src="static/img/logo.png">
+
+			<div class="userView" style="height: 150px; width: 100%;">
+				<img class="background" style="width: 100%; z-index: 999; " src="static/img/logo.png">
 			</div>
+            <i class="right material-icons" style="z-index: 9999; color: black;">close</i>
 
 		</li>
 		<li>
@@ -48,7 +49,7 @@
 			<nav class="blue  darken-4">
 				<div class="nav-wrapper">
 					<a href="#front" class="brand-logo center left-align" style="width: 100%">AP Home Tutions</a>
-					<a id="foo"> <i href="#!" data-activates="slide-out" class="material-icons button-collapse" style="margin-left:; "">menu</i></a>
+					<a id="foo"> <i href="#!" data-activates="slide-out" class="material-icons button-collapse" style="margin-left:; ">menu</i></a>
 					<!--  href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i> -->
 					<!-- <ul class="right hide-on-med-and-down">
 										<li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
@@ -60,9 +61,11 @@
 						<li><a href="#subjects">subjects</a></li>
 					</ul> -->
 				</div>
+                <marquee class="blue lighten-3" direction="left" style="color: white; font-size: 20px; padding: 0rem;"> For Enquirey contact - 9039737484</marquee>
 			</nav>
+
 		</div>
-		<marquee class="blue lighten-3" direction="left" style="color: white; font-size: 20px; padding: 0rem;"> For Enquirey contact - 9039737484</marquee>
+		<!--<marquee class="blue lighten-3" direction="left" style="color: white; font-size: 20px; padding: 0rem;"> For Enquirey contact - 9039737484</marquee>-->
 	</div>
 
 	<!-- **************************************************************Main*************************************************** -->
@@ -123,13 +126,13 @@
 	<div class="container">
 		<div class="row" style="padding: 0%">
 			<div class="col l6 s12 m6">
-    <div class="card horizontal">
+    <div class="card horizontal ">
       <div class="card-image">
-        <img src="static/img/teacher.png">
+        <img src="static/img/cbse.png">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">CBSE</span>
         </div>
         <div class="card-action">
           <a href="#">+</a>
@@ -140,11 +143,28 @@
   <div class="col l6 s12 m6">
     <div class="card horizontal">
       <div class="card-image">
-        <img src="static/img/teacher.png">
+        <img src="static/img/stateboard.png">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">State Board</span>
+        </div>
+        <div class="card-action">
+          <a href="#">+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+        <div class="row" style="padding: 0%">
+  <div class="col l6 s12 m6">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="static/img/icse.png">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <span class="card-title">ICSC</span>
         </div>
         <div class="card-action">
           <a href="#">+</a>
@@ -155,26 +175,11 @@
   <div class="col l6 s12 m6">
     <div class="card horizontal">
       <div class="card-image">
-        <img src="static/img/teacher.png">
+        <img src="static/img/ib.png">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
-        </div>
-        <div class="card-action">
-          <a href="#">+</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col l6 s12 m6">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="static/img/teacher.png">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">IB</span>
         </div>
         <div class="card-action">
           <a href="#">+</a>
@@ -184,8 +189,8 @@
   </div>
 		</div>
 	</div>
-		
-	</div>	
+
+	</div>
 	<div id="subjects" class="Section accent-1 scrollspy" style="margin-top: 12%; margin-bottom: 12%" >
 	<div class="container">
 		<div class="row" style="padding: 0%">
@@ -196,10 +201,10 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">Physics</span>
         </div>
         <div class="card-action">
-          <a href="#">+</a>
+          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
       </div>
     </div>
@@ -211,10 +216,10 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">Chemistry</span>
         </div>
         <div class="card-action">
-          <a href="#">+</a>
+          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
       </div>
     </div>
@@ -226,40 +231,28 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">Mathematics</span>
         </div>
         <div class="card-action">
-          <a href="#">+</a>
+          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
       </div>
     </div>
   </div>
-    <div class="col l4 s12 m4">
+        </div>
+
+             <div class="row" style="padding: 0%">
+			<div class="col l4 s12 m4">
     <div class="card horizontal">
       <div class="card-image">
         <img src="static/img/teacher.png">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">Biology</span>
         </div>
         <div class="card-action">
-          <a href="#">+</a>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="col l4 s12 m4">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="static/img/teacher.png">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>This is a subject</p>
-        </div>
-        <div class="card-action">
-          <a href="#">+</a>
+          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
       </div>
     </div>
@@ -271,14 +264,31 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>This is a subject</p>
+          <span class="card-title">English</span>
         </div>
         <div class="card-action">
-          <a href="#">+</a>
+          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
       </div>
     </div>
   </div>
+  <div class="col l4 s12 m4">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="static/img/teacher.png">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <span class="card-title">Social Studies</span>
+        </div>
+        <div class="card-action">
+          <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+
 		</div>
 	</div>
 		
