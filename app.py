@@ -16,22 +16,22 @@ def sendMail():
             print("khuch aya")
             result = request.form
             print(result)
-            fromaddr = 'aphometutionsno1@gmail.com'
-            toaddrs = 'aphometutionsno1@gmail.com'
-
-            msg = "\r\n".join([
-                "From: aphometutionsno1@gmail.com",
-                "To: aphometutionsno1@gmail.com",
-                "Subject: AP Home Tuyion",
-                "",str(result)
-            ])
-
-            server = smtplib.SMTP('smtp.gmail.com:587')
-            server.ehlo()
-            server.starttls()
-            server.login('aphometutionsno1@gmail.com', 'Prateek@12')
-            server.sendmail(fromaddr, toaddrs, msg)
-            server.quit()
+            # fromaddr = 'aphometutionsno1@gmail.com'
+            # toaddrs = 'aphometutionsno1@gmail.com'
+            #
+            # msg = "\r\n".join([
+            #     "From: aphometutionsno1@gmail.com",
+            #     "To: aphometutionsno1@gmail.com",
+            #     "Subject: AP Home Tuyion",
+            #     "",str(result)
+            # ])
+            #
+            # server = smtplib.SMTP('smtp.gmail.com:587')
+            # server.ehlo()
+            # server.starttls()
+            # server.login('aphometutionsno1@gmail.com', 'Prateek@12')
+            # server.sendmail(fromaddr, toaddrs, msg)
+            # server.quit()
             return "1"
         except:
             print("exception")
