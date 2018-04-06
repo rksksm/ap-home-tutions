@@ -376,21 +376,21 @@ $(document).ready(function(){
         e.preventDefault();
         console.log(e.currentTarget);
         $.ajax({
-            url: 'http://10.95.12.86:8080/send',
+            url: 'http://aphometutions.com/send',
             data: $('form').serialize(),
             type: 'post',
             success: function(response) {
                 console.log(response)
                 if (response == '1') {
                     $("#sub").show()
-                    alert("Connection is valid")
+                    alert("Request submitted")
                     $("#msg").html('<span><font color=green size=3>Connection is valid</font></span>')
                 } else {
-                    alert('MySQL Exception')
+                    //alert('MySQL Exception')
                 }
             },
             error: function(er) {
-                alert("Wrong credentials")
+                alert("Something Went wrong!!")
                 $("#msg").html('<span><font color=red size=3>Wrong Credentials</font></span>')
                 console.log(er)
             }
