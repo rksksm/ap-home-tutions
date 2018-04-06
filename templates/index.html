@@ -382,10 +382,20 @@ $(document).ready(function(){
             success: function(response) {
                 console.log(response)
                     //alert("Request submitted")
-                    M.toast({html: 'Request submitted, We will get back to you !!!'})
+                    Materialize.toast({html: 'Request submitted, We will get back to you !!!'})
+                    setTimeout(
+  function()
+  {
+      Materialize.Toast.dismissAll();
+  }, 10000);
             },
             error: function(er) {
-                M.toast({html: 'Request submitted, We will get back to you soon !!!'})
+                Materialize.toast({html: 'Some thing went wrong Please call me on +91-8291481502, +91-7506462054 !!!'})
+                setTimeout(
+  function()
+  {
+    Materialize.Toast.dismissAll();
+  }, 10000);
                 $("#msg").html('<span><font color=red size=3>Wrong Credentials</font></span>')
                 console.log(er)
             }
