@@ -77,7 +77,7 @@
 					<div class="card z-depth-3">
 						<div class="card-image ">
 							<img src="static/img/student.png">
-							<a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+							<a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
 						</div>
 						<div class="card-content blue lighten-3">
 							<span class="card-title">Register as a Student</span>
@@ -88,10 +88,10 @@
 					<div class="card z-depth-3">
 						<div class="card-image">
 							<img src="static/img/parient.png">
-							<a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+							<a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
 						</div>
 						<div class="card-content blue lighten-3">
-							<span class="card-title">Register as a Guardian</span>
+							<span data-target="modal1" class="card-title">Register as a Guardian</span>
 						</div>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 						<div class="card-image">
 							<img src="static/img/teacher.png">
 
-							<a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+							<a data-target="modal2" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
 						</div>
 						<div class="card-content blue lighten-3">
 							<span class="card-title">Register as a Teacher</span>
@@ -109,8 +109,53 @@
 				</div>
 			</div>
 			<div class="fixed-action-btn horizontal click-to-toggle">
-				<a id="menu" class="waves-effect waves-light btn btn-large blue btn-floating pulse waves-effect waves-light	">Demo</a>
+				<a id="menu" data-target="modal1" class="waves-effect waves-light btn modal-trigger btn-large blue btn-floating pulse waves-effect waves-light	">Demo</a>
+                <!-- Modal Trigger -->
+<!--<form action="{{ url_for('sendMail') }}" method="post">-->
 
+    <!--<input type="text" name="projectFilepath">-->
+    <!--<input type="submit">-->
+                      <!--</form>-->
+                <!-- Modal Structure -->
+                  <div id="modal1" class="modal" style="z-index:1029">
+                      <form action="{{ url_for('sendMail') }}" method="post" role="form">
+                    <div class="modal-content">
+
+                      <h4>Registration</h4>
+                      <input placeholder="Full Name" id="full_name" name="full_name" type="text">
+                        <label for="full_name">Full Name</label>
+                        <input placeholder="Phone Number" id="mobile" name="mobile" type="text">
+                        <label for="mobile">Phone Number</label>
+                        <input placeholder="Class" id="class" name="class" type="text">
+                        <label for="class">Class</label>
+                        <input placeholder="Subject" id="subject" name="subject" type="text">
+                        <label for="subject">Subject</label>
+                        <input placeholder="School" id="school" name="school" type="text">
+                        <label for="school">School</label>
+                    </div>
+                    <div class="modal-footer">
+                      <a id="test" type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+                    </div>
+                      </form>
+                  </div>
+                <div id="modal2" class="modal" style="z-index:1029">
+                    <div class="modal-content">
+                      <h4>Registration</h4>
+                      <input placeholder="Full Name" id="T_full_name" type="text">
+                        <label for="full_name">Full Name</label>
+                        <input placeholder="Phone Number" id="T_mobile" type="text">
+                        <label for="T_mobile">Phone Number</label>
+                        <input placeholder="Experience" id="experience" type="text">
+                        <label for="experience">Experience</label>
+                        <input placeholder="Qualification" id="qualification" type="text">
+                        <label for="qualification">Qualification</label>
+                        <input placeholder="Subject" id="Tsubject" type="text">
+                        <label for="Tsubject">Subject</label>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+                    </div>
+                  </div>
 				<!-- Tap Target Structure -->
 				<div class="tap-target" data-activates="menu">
 					<div class="tap-target-content">
@@ -134,7 +179,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">CBSE</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -148,7 +193,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">State Board</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -164,7 +209,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">ICSC</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -178,7 +223,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">IB</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -200,7 +245,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">Physics</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -214,7 +259,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">Chemistry</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -228,7 +273,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">Mathematics</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -245,7 +290,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">Engineering Drawing</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -259,7 +304,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">Engineering Mathematics</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
 
       </div>
@@ -273,7 +318,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <span class="card-title">Programming Languages</span>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
+            <a data-target="modal1" class="btn-floating halfway-fab modal-trigger waves-effect waves-light blue pulse waves-effect waves-light	"><i class="material-icons">add</i></a>
         </div>
       </div>
     </div>
@@ -309,6 +354,13 @@ $(document).ready(function(){
 					   
         
 </script>
+<script>
+    $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+</script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116713838-1"></script>
 <script>
@@ -317,6 +369,34 @@ $(document).ready(function(){
   gtag('js', new Date());
 
   gtag('config', 'UA-116713838-1');
+</script>
+<script>
+    $(function($) {
+    $('#test').on('click', function(e) {
+        e.preventDefault();
+        console.log(e.currentTarget);
+        $.ajax({
+            url: 'http://10.95.12.86:8080/send',
+            data: $('form').serialize(),
+            type: 'post',
+            success: function(response) {
+                console.log(response)
+                if (response == '1') {
+                    $("#sub").show()
+                    alert("Connection is valid")
+                    $("#msg").html('<span><font color=green size=3>Connection is valid</font></span>')
+                } else {
+                    alert('MySQL Exception')
+                }
+            },
+            error: function(er) {
+                alert("Wrong credentials")
+                $("#msg").html('<span><font color=red size=3>Wrong Credentials</font></span>')
+                console.log(er)
+            }
+        })
+    })
+})
 </script>
 
 </html>
