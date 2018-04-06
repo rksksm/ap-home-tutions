@@ -381,12 +381,7 @@ $(document).ready(function(){
             type: 'post',
             success: function(response) {
                 console.log(response)
-                if (response == '1') {
-                    $("#sub").show()
                     alert("Request submitted")
-                    $("#msg").html('<span><font color=green size=3>Connection is valid</font></span>')
-                } else {
-                    //alert('MySQL Exception')
                 }
             },
             error: function(er) {
