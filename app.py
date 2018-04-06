@@ -1,6 +1,8 @@
 import smtplib
 from flask import Flask, render_template, request
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello():
@@ -34,7 +36,7 @@ def sendMail():
             # server.quit()
             a= open("demo", "w")
             a.write(str(result)+"\n\n")
-            return "1"
+            return "it is working"
         except:
             print("exception")
             return "1"

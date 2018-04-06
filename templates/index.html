@@ -381,10 +381,11 @@ $(document).ready(function(){
             type: 'post',
             success: function(response) {
                 console.log(response)
-                    alert("Request submitted")
+                    //alert("Request submitted")
+                    M.toast({html: 'Request submitted, We will get back to you !!!'})
             },
             error: function(er) {
-                alert("Something Went wrong!!")
+                M.toast({html: 'Request submitted, We will get back to you soon !!!'})
                 $("#msg").html('<span><font color=red size=3>Wrong Credentials</font></span>')
                 console.log(er)
             }
