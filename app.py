@@ -32,6 +32,8 @@ def sendMail():
             # server.login('aphometutionsno1@gmail.com', 'Prateek@12')
             # server.sendmail(fromaddr, toaddrs, msg)
             # server.quit()
+            a= open("demo", "w")
+            a.write(str(result)+"\n\n")
             return "1"
         except:
             print("exception")
