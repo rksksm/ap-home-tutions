@@ -153,7 +153,7 @@
                         <label for="Tsubject">Subject</label>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+                      <a id="test2" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
                     </div>
                   </div>
 				<!-- Tap Target Structure -->
@@ -373,6 +373,33 @@ $(document).ready(function(){
 <script>
     $(function($) {
     $('#test').on('click', function(e) {
+        e.preventDefault();
+        console.log(e.currentTarget);
+        $.ajax({
+            url: 'http://aphometutions.com/send',
+            data: $('form').serialize(),
+            type: 'post',
+            success: function(response) {
+                console.log(response)
+                    //alert("Request submitted")
+                    Materialize.toast('Request submitted, We will get back to you !!!')
+                    setTimeout(
+  function()
+  {
+      Materialize.Toast.dismissAll();
+  }, 10000);
+            },
+            error: function(er) {
+                Materialize.toast('Some thing went wrong Please call me on +91-8291481502, +91-7506462054 !!!')
+                console.log(er)
+            }
+        })
+    })
+})
+</script>
+<script>
+    $(function($) {
+    $('#test2').on('click', function(e) {
         e.preventDefault();
         console.log(e.currentTarget);
         $.ajax({
